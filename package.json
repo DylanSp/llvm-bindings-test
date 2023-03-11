@@ -28,5 +28,8 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "llvm-bindings": "^0.4.2"
   }
 }
