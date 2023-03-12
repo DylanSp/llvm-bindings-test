@@ -5,7 +5,8 @@ function generateFullProgram() {
   const module = new llvm.Module("example", context);
   const builder = new llvm.IRBuilder(context);
 
-  // from libc:
+  // generate external definition referencing the libc function putchar so we can call it:
+  // function prototype in C:
   // int putchar(int c);
   function generatePutCharExternalDeclaration() {
     const returnType = builder.getInt32Ty();
